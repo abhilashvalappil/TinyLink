@@ -1,12 +1,6 @@
 
 import { AxiosError } from "axios";
-
-// interface BackendErrorResponse {
-//     success: boolean;
-//     message: string;
-//     error?: string;
-// }
-
+ 
 export const handleApiError = (error: unknown): string => {
   if (error instanceof AxiosError) {
     const backendError = error.response?.data;
